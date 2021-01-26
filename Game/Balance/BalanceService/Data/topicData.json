@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "type": "love",
+    "imageURL": "bg_love"
+  },
+  {
+    "id": 2,
+    "type": "life",
+    "imageURL": "bg_love"
+  },
+  {
+    "id": 3,
+    "type": "life",
+    "imageURL": "bg_love"
+  },
+  {
+    "id": 4,
+    "type": "life",
+    "imageURL": "bg_love"
+  }
+  
+]

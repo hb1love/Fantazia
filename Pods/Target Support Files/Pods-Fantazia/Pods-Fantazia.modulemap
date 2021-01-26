@@ -1,0 +1,6 @@
+framework module Pods_Fantazia {
+  umbrella header "Pods-Fantazia-umbrella.h"
+
+  export *
+  module * { export * }
+}

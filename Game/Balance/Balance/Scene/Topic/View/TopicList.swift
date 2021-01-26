@@ -1,0 +1,45 @@
+//
+//  TopicList.swift
+//  BalanceUI
+//
+//  Created by hbkim on 2021/01/24.
+//
+
+import SwiftUI
+import BalanceService
+
+struct TopicList: View {
+  @Binding var viewModel: TopicListModel
+  
+  var body: some View {
+    NavigationView {
+      GeometryReader { geometry in
+        ScrollView(showsIndicators: false) {
+          LazyVStack {
+            ForEach(viewModel.topics) { topic in
+              
+              TopicRow(topic: topic)
+                .frame(minWidth: 0,
+                       idealWidth: geometry.size.width,
+                       maxWidth: geometry.size.width)
+                .frame(height: geometry.size.width / 3 * 2)
+            }
+            .padding(.horizontal, 24)
+            .padding(.vertical, 8)
+          }
+        }
+      }
+      .navigationTitle("Topic")
+    }
+  }
+}
+
+struct TopicList_Previews: PreviewProvider {
+  static var previews: some View {
+    ForEach(["iPhone 8", "iPhone 12 Pro"], id: \.self) { deviceName in
+      TopicList(viewModel: .constant(TopicListModel(topics: topics)))
+        .previewDevice(PreviewDevice(rawValue: deviceName))
+        .previewDisplayName(deviceName)
+    }
+  }
+}
