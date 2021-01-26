@@ -11,6 +11,7 @@ import BalanceService
 import Logging
 import Core
 import Firebase
+import FirebaseFirestore
 
 @main
 struct FantaziaApp: App {
@@ -20,6 +21,22 @@ struct FantaziaApp: App {
     FirebaseApp.configure()
     LoggingModule.addEnvironment(.console)
     BalanceModule.setup(with: Self.self)
+
+    let settings = Firestore.firestore().settings
+    settings.host = "localhost:8080"
+    settings.isPersistenceEnabled = false
+    settings.isSSLEnabled = false
+    Firestore.firestore().settings = settings
+    let db = Firestore.firestore()
+    db.collection("topics").getDocuments { (querySnapshot, err) in
+      if let err = err {
+        print("Error getting documents: \(err)")
+      } else {
+        for document in querySnapshot!.documents {
+          print("\(document.documentID) => \(document.data())")
+        }
+      }
+    }
 
   }
 

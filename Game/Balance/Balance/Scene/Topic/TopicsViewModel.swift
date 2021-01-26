@@ -45,7 +45,7 @@ final class TopicsViewModel: ObservableObject, Identifiable {
     bindInputs()
     bindOutputs()
   }
-  
+
   private func bindInputs() {
     let responsePublisher = onAppearSubject
       .flatMap { [balanceService] _ in

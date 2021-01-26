@@ -8,14 +8,18 @@
 import SwiftUI
 import Combine
 import BalanceService
+import Logging
 
 public struct TopicsView: View {
   
   @ObservedObject var viewModel: TopicsViewModel
   
   public var body: some View {
-    VStack {
+    NavigationView {
       TopicList(viewModel: $viewModel.dataSource)
+        .navigationTitle("Topic")
+        .padding(.bottom, 32)
+        .edgesIgnoringSafeArea(.bottom)
     }
     .onAppear(perform: { viewModel.apply(.onAppear) })
     .edgesIgnoringSafeArea(.top)

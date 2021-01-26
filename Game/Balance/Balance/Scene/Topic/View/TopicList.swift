@@ -12,24 +12,21 @@ struct TopicList: View {
   @Binding var viewModel: TopicListModel
   
   var body: some View {
-    NavigationView {
-      GeometryReader { geometry in
-        ScrollView(showsIndicators: false) {
-          LazyVStack {
-            ForEach(viewModel.topics) { topic in
-              
-              TopicRow(topic: topic)
-                .frame(minWidth: 0,
-                       idealWidth: geometry.size.width,
-                       maxWidth: geometry.size.width)
-                .frame(height: geometry.size.width / 3 * 2)
-            }
-            .padding(.horizontal, 24)
-            .padding(.vertical, 8)
+    GeometryReader { geometry in
+      ScrollView(showsIndicators: false) {
+        LazyVStack {
+          ForEach(viewModel.topics, id: \.self) { topic in
+            TopicRow(topic: topic)
+              .id(topic.id)
+              .frame(minWidth: 0,
+                     idealWidth: geometry.size.width,
+                     maxWidth: geometry.size.width)
+              .frame(height: geometry.size.width / 3 * 2)
           }
+          .padding(.horizontal, 16)
         }
+        .padding(.vertical, 16)
       }
-      .navigationTitle("Topic")
     }
   }
 }

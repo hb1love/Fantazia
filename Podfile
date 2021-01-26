@@ -8,7 +8,7 @@ target 'Fantazia' do
   project 'Fantazia/Fantazia'
 
   pod 'Firebase/Analytics'
-
+  pod 'Firebase/Firestore'
 end
 
 post_install do |installer|

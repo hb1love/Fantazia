@@ -16,12 +16,14 @@ struct TopicRow: View {
       topic.image
         .resizable()
         .cornerRadius(24)
-        .shadow(radius: 7)
+        .shadow(radius: 4)
 
       Text(topic.title)
         .font(Font.system(size: 24, design: .default))
         .foregroundColor(Color.black.opacity(0.5))
     }
+    .padding(.vertical, 8)
+    .listRowBackground(Color.white)
   }
 }
 
