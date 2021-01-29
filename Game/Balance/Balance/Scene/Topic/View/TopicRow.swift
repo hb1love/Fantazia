@@ -15,14 +15,14 @@ struct TopicRow: View {
     ZStack {
       topic.image
         .resizable()
-        .cornerRadius(24)
-        .shadow(radius: 4)
+        .cornerRadius(12)
+        .shadow(color: .gray, radius: 10)
 
       Text(topic.title)
         .font(Font.system(size: 24, design: .default))
-        .foregroundColor(Color.black.opacity(0.5))
+        .foregroundColor(Color.white)
     }
-    .padding(.vertical, 8)
+    .padding(.vertical, 16)
     .listRowBackground(Color.white)
   }
 }

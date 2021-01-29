@@ -16,16 +16,18 @@ struct TopicList: View {
       ScrollView(showsIndicators: false) {
         LazyVStack {
           ForEach(viewModel.topics, id: \.self) { topic in
-            TopicRow(topic: topic)
-              .id(topic.id)
-              .frame(minWidth: 0,
-                     idealWidth: geometry.size.width,
-                     maxWidth: geometry.size.width)
-              .frame(height: geometry.size.width / 3 * 2)
+            NavigationLink(destination: BalanceModule.questionsView(topic: topic)) {
+              TopicRow(topic: topic)
+                .id(topic.id)
+                .frame(minWidth: 0,
+                       idealWidth: geometry.size.width,
+                       maxWidth: geometry.size.width)
+                .frame(height: geometry.size.width / 3 * 2)
+            }
           }
-          .padding(.horizontal, 16)
+          .padding(.horizontal, 32)
         }
-        .padding(.vertical, 16)
+        .padding(.vertical, 32)
       }
     }
   }

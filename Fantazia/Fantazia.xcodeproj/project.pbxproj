@@ -17,6 +17,8 @@
 		9180501425C0711C00C38510 /* Core.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9180501225C0711C00C38510 /* Core.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		9180501625C0711E00C38510 /* Logging.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9180501525C0711E00C38510 /* Logging.framework */; };
 		9180501725C0711E00C38510 /* Logging.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9180501525C0711E00C38510 /* Logging.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		9190D1AD25C43F6200969539 /* Resource.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9190D1AC25C43F6200969539 /* Resource.framework */; };
+		9190D1AE25C43F6200969539 /* Resource.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9190D1AC25C43F6200969539 /* Resource.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		91B2798225C0781F00E583C9 /* BalanceService.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91B2798125C0781F00E583C9 /* BalanceService.framework */; };
 		91B2798325C0781F00E583C9 /* BalanceService.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 91B2798125C0781F00E583C9 /* BalanceService.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		91E1EAFF25C07C5B005D31DB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9180501825C0755200C38510 /* GoogleService-Info.plist */; };
@@ -33,6 +35,7 @@
 				9180501425C0711C00C38510 /* Core.framework in Embed Frameworks */,
 				9180501725C0711E00C38510 /* Logging.framework in Embed Frameworks */,
 				91B2798325C0781F00E583C9 /* BalanceService.framework in Embed Frameworks */,
+				9190D1AE25C43F6200969539 /* Resource.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -50,6 +53,7 @@
 		9180501225C0711C00C38510 /* Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9180501525C0711E00C38510 /* Logging.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Logging.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9180501825C0755200C38510 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		9190D1AC25C43F6200969539 /* Resource.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Resource.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		91B2798125C0781F00E583C9 /* BalanceService.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = BalanceService.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B702655990B6D531498957D7 /* Pods-Fantazia.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fantazia.release.xcconfig"; path = "Target Support Files/Pods-Fantazia/Pods-Fantazia.release.xcconfig"; sourceTree = "<group>"; };
 		D689D449303A2B2DEBB52E04 /* Pods_Fantazia.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Fantazia.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -64,6 +68,7 @@
 				9180501325C0711C00C38510 /* Core.framework in Frameworks */,
 				91B2798225C0781F00E583C9 /* BalanceService.framework in Frameworks */,
 				9180501625C0711E00C38510 /* Logging.framework in Frameworks */,
+				9190D1AD25C43F6200969539 /* Resource.framework in Frameworks */,
 				07CB1633F75219EAA82697C4 /* Pods_Fantazia.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -124,6 +129,7 @@
 		91804EC325C04BCB00C38510 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9190D1AC25C43F6200969539 /* Resource.framework */,
 				91B2798125C0781F00E583C9 /* BalanceService.framework */,
 				9180501525C0711E00C38510 /* Logging.framework */,
 				9180501225C0711C00C38510 /* Core.framework */,

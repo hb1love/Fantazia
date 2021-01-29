@@ -35,23 +35,25 @@ final class QuestionsViewModel: ObservableObject, Identifiable {
   @Published var dataSource: [Question] = []
   @Published var question: Question = .default
   @Published var errorMessage = ""
+  @Published var title = ""
   var order: Int = 0
   
   private let responseSubject = PassthroughSubject<[Question], Never>()
   private let errorSubject = PassthroughSubject<BalanceError, Never>()
   private let trackingSubject = PassthroughSubject<LogEvent, Never>()
   
-  private let topicId: Int
+  private let topic: Topic
   private let balanceService: BalanceService
   private let loggingService: LoggingService
   init(
-    topicId: Int,
+    topic: Topic,
     balanceService: BalanceService,
     loggingService: LoggingService
   ) {
-    self.topicId = topicId
+    self.topic = topic
     self.balanceService = balanceService
     self.loggingService = loggingService
+    self.title = topic.title
     
     bindInputs()
     bindOutputs()
@@ -60,7 +62,7 @@ final class QuestionsViewModel: ObservableObject, Identifiable {
   private func bindInputs() {
     let responsePublisher = onAppearSubject
       .flatMap { [balanceService] _ in
-        balanceService.getQuestions(topicId: self.topicId)
+        balanceService.getQuestions(topic: self.topic)
           .catch { [weak self] error -> Empty<[Question], Never> in
             self?.errorSubject.send(error)
             return .init()

@@ -36,17 +36,17 @@ public extension BalanceModule {
     )
   }
   
-  static func questionsView(topicId: Int) -> QuestionsView {
+  static func questionsView(topic: Topic) -> QuestionsView {
     QuestionsView(
-      viewModel: questionsViewModel(topicId: topicId)
+      viewModel: questionsViewModel(topic: topic)
     )
   }
 }
 
 extension BalanceModule {
-  static func questionsViewModel(topicId: Int) -> QuestionsViewModel {
+  static func questionsViewModel(topic: Topic) -> QuestionsViewModel {
     QuestionsViewModel(
-      topicId: topicId,
+      topic: topic,
       balanceService: BalanceServiceModule.balanceService,
       loggingService: LoggingModule.loggingService
     )

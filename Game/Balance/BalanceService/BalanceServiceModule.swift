@@ -5,6 +5,8 @@
 //  Created by hbkim on 2021/01/17.
 //
 
+import Logging
+
 public protocol BalanceServiceConfiguration {
   static var baseUrl: String { get }
 }
@@ -29,6 +31,6 @@ public class BalanceServiceModule {
 
 public extension BalanceServiceModule {
   static var balanceService: BalanceService = {
-    BalanceGameService()
+    BalanceGameService(loggingService: LoggingModule.loggingService)
   }()
 }

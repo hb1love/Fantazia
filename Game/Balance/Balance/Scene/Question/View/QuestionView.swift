@@ -7,6 +7,7 @@
 
 import SwiftUI
 import BalanceService
+import Resource
 
 struct QuestionView: View {
   @ObservedObject var viewModel: QuestionsViewModel
@@ -14,27 +15,28 @@ struct QuestionView: View {
   
   var body: some View {
     GeometryReader { geometry in
-      VStack {
-        AnswerButton(title: question.a)
-
-        Text("VS")
-          .font(Font.system(size: 24, design: .default))
-          .foregroundColor(.purple)
-          .padding()
-
-        AnswerButton(title: question.b)
+      VStack(spacing: 16) {
+        Text(question.q ?? "")
+          .foregroundColor(Color.black)
+          .font(Font.system(size: 18, weight: .bold, design: .rounded))
+        AnswerButton(title: question.a, color: Color.questionA)
+        AnswerButton(title: question.b, color: Color.questionB)
       }
     }
   }
 
-  func AnswerButton(title: String) -> some View {
+  func AnswerButton(title: String, color: Color) -> some View {
     Button(action: {
       viewModel.apply(.onNext)
     }, label: {
       Text(title)
-        .font(Font.system(size: 18, design: .default))
-        .foregroundColor(.white)
+        .font(Font.system(size: 24, weight: .bold, design: .rounded))
+        .multilineTextAlignment(.center)
+        .padding()
         .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity)
+        .foregroundColor(.white)
+        .background(color)
+        .cornerRadius(15.0)
     }).buttonStyle(GradientButtonStyle())
   }
 }
@@ -42,9 +44,6 @@ struct QuestionView: View {
 struct GradientButtonStyle: ButtonStyle {
   func makeBody(configuration: Self.Configuration) -> some View {
     configuration.label
-      .foregroundColor(Color.white)
-      .background(LinearGradient(gradient: Gradient(colors: [Color.red, Color.orange]), startPoint: .leading, endPoint: .trailing))
-      .cornerRadius(15.0)
       .scaleEffect(configuration.isPressed ? 0.9 : 1.0)
       .animation(.spring(response: 0.2, blendDuration: 0.2))
   }
@@ -53,7 +52,7 @@ struct GradientButtonStyle: ButtonStyle {
 struct QuestionView_Previews: PreviewProvider {
   static var previews: some View {
     QuestionView(
-      viewModel: BalanceModule.questionsViewModel(topicId: 1),
+      viewModel: BalanceModule.questionsViewModel(topic: Topic.default),
       question: .constant(questions[0])
     ).previewLayout(.fixed(width: 400, height: 600))
   }

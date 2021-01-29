@@ -24,6 +24,8 @@
 		9180500725C06B2000C38510 /* Balance.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 91D28F2125B45532002B72B4 /* Balance.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		9180500C25C06B2D00C38510 /* Logging.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9180500B25C06B2D00C38510 /* Logging.framework */; };
 		9180500D25C06B2D00C38510 /* Logging.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9180500B25C06B2D00C38510 /* Logging.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		9190D1AA25C43F5B00969539 /* Resource.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9190D1A925C43F5B00969539 /* Resource.framework */; };
+		9190D1AB25C43F5B00969539 /* Resource.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9190D1A925C43F5B00969539 /* Resource.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		919DD6A125BF0235007D735C /* TopicListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 919DD6A025BF0235007D735C /* TopicListModel.swift */; };
 		919DD6A625BF117E007D735C /* QuestionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 919DD6A525BF117E007D735C /* QuestionsView.swift */; };
 		919DD6A925BF118A007D735C /* QuestionsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 919DD6A825BF118A007D735C /* QuestionsViewModel.swift */; };
@@ -94,6 +96,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				91804F4C25C0656300C38510 /* Logging.framework in Embed Frameworks */,
+				9190D1AB25C43F5B00969539 /* Resource.framework in Embed Frameworks */,
 				91D28F4C25B45668002B72B4 /* BalanceService.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -115,6 +118,7 @@
 		91804FEF25C06A8B00C38510 /* BalanceApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BalanceApp.swift; path = BalanceApp/BalanceApp.swift; sourceTree = "<group>"; };
 		91804FF025C06A8B00C38510 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = BalanceApp/Assets.xcassets; sourceTree = "<group>"; };
 		9180500B25C06B2D00C38510 /* Logging.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Logging.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9190D1A925C43F5B00969539 /* Resource.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Resource.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		919DD6A025BF0235007D735C /* TopicListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicListModel.swift; sourceTree = "<group>"; };
 		919DD6A525BF117E007D735C /* QuestionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsView.swift; sourceTree = "<group>"; };
 		919DD6A825BF118A007D735C /* QuestionsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsViewModel.swift; sourceTree = "<group>"; };
@@ -162,6 +166,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				91804F4B25C0656300C38510 /* Logging.framework in Frameworks */,
+				9190D1AA25C43F5B00969539 /* Resource.framework in Frameworks */,
 				91D28F4B25B45668002B72B4 /* BalanceService.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -321,6 +326,7 @@
 		91D28F4A25B45668002B72B4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9190D1A925C43F5B00969539 /* Resource.framework */,
 				9180500B25C06B2D00C38510 /* Logging.framework */,
 				91804F4A25C0656300C38510 /* Logging.framework */,
 				91804F4725C0654800C38510 /* Logging.framework */,

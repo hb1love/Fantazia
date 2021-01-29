@@ -1,23 +1,37 @@
 [
   {
     "id": 1,
-    "type": "love",
-    "imageURL": "bg_love"
+    "type": "all",
+    "imageURL": "bg_all"
   },
   {
     "id": 2,
     "type": "life",
-    "imageURL": "bg_love"
+    "imageURL": "bg_life"
   },
   {
     "id": 3,
-    "type": "life",
-    "imageURL": "bg_love"
+    "type": "food",
+    "imageURL": "bg_food"
   },
   {
     "id": 4,
-    "type": "life",
-    "imageURL": "bg_love"
+    "type": "ethics",
+    "imageURL": "bg_ethics"
+  },
+  {
+    "id": 5,
+    "type": "general",
+    "imageURL": "bg_general"
+  },
+  {
+    "id": 6,
+    "type": "lover",
+    "imageURL": "bg_lover"
+  },
+  {
+    "id": 7,
+    "type": "adult",
+    "imageURL": "bg_lover"
   }
-  
 ]

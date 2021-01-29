@@ -7,37 +7,52 @@
 
 import SwiftUI
 import BalanceService
+import Resource
 
 public struct QuestionsView: View {
   
   @ObservedObject var viewModel: QuestionsViewModel
   
   public var body: some View {
-    NavigationView {
+    ZStack {
       VStack {
         QuestionView(viewModel: viewModel, question: $viewModel.question)
-        HStack {
+          .padding(.all, 32)
+          .onAppear(perform: { viewModel.apply(.onAppear) })
+
+        Spacer()
+      }.padding(.bottom, 64)
+
+      VStack(alignment: .center) {
+        Spacer()
+        HStack(spacing: 20) {
           Button(action: {
             viewModel.apply(.onPrev)
           }, label: {
-            Text("이전 질문")
-              .font(Font.system(size: 18, design: .default))
-              .foregroundColor(.black)
-              .padding(.vertical, 16)
+            "ic_prev".image
           })
-          Spacer()
-        }.padding(.all, 16)
+
+          Button(action: {
+            viewModel.apply(.onNext)
+          }, label: {
+            "ic_next".image
+          })
+        }
+        .padding(.horizontal, 32)
+        .padding(.vertical, 16)
+        .background(Color.white)
+        .cornerRadius(28)
+        .shadow(radius: 10)
+        .padding(.bottom, 8)
       }
-      .padding(.all, 16)
-      .onAppear(perform: { viewModel.apply(.onAppear) })
-    }
-    .edgesIgnoringSafeArea(.top)
-    .edgesIgnoringSafeArea(.bottom)
+    }.navigationTitle(viewModel.title)
   }
 }
 
 struct QuestionsView_Previews: PreviewProvider {
   static var previews: some View {
-    BalanceModule.questionsView(topicId: topics[0].id)
+    BalanceModule.questionsView(topic: topics[0])
   }
 }
+
+

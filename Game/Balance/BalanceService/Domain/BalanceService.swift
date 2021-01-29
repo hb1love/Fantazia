@@ -7,15 +7,22 @@
 
 import SwiftUI
 import Combine
+import Logging
 
 public protocol BalanceService {
   func getTopics() -> AnyPublisher<[Topic], BalanceError>
-  func getQuestions(topicId: Int) -> AnyPublisher<[Question], BalanceError>
+  func getQuestions(topic: Topic) -> AnyPublisher<[Question], BalanceError>
 }
 
 class BalanceGameService: BalanceService {
   @State var _topics: [Topic] = []
   @State var _questions: [Question] = []
+
+  private let loggingService: LoggingService
+
+  init(loggingService: LoggingService) {
+    self.loggingService = loggingService
+  }
   
   func getTopics() -> AnyPublisher<[Topic], BalanceError> {
     guard _topics.isEmpty else {
@@ -33,20 +40,10 @@ class BalanceGameService: BalanceService {
       .eraseToAnyPublisher()
   }
   
-  func getQuestions(topicId: Int) -> AnyPublisher<[Question], BalanceError> {
+  func getQuestions(topic: Topic) -> AnyPublisher<[Question], BalanceError> {
     #if DEBUG
     let topic = Topic.default
     #else
-    if _topics.isEmpty {
-      return Fail(error: .noTopic)
-        .eraseToAnyPublisher()
-    }
-
-    guard let topic = _topics.first(where: { $0.id == topicId }) else {
-      return Fail(error: .notMatchTopic)
-        .eraseToAnyPublisher()
-    }
-
     guard _questions.isEmpty else {
       return Just(_questions.filter { $0.types.contains(topic.type) }.shuffled())
         .mapError { _ -> BalanceError in
@@ -60,10 +57,11 @@ class BalanceGameService: BalanceService {
       .handleEvents(receiveOutput: {
                       self._questions = $0
       })
-      .map { $0.filter { $0.types.contains(topic.type) }}
+      .map { $0.filter { $0.topicIds.contains(topic.id) }}
       .map { $0.shuffled() }
       .mapError { _ -> BalanceError in
-        .noTopic
+        self.loggingService.error(BalanceError.noTopic)
+        return .noTopic
       }
       .eraseToAnyPublisher()
   }

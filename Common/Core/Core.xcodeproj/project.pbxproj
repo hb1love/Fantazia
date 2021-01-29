@@ -8,16 +8,33 @@
 
 /* Begin PBXBuildFile section */
 		91804EE025C04E5800C38510 /* Core.h in Headers */ = {isa = PBXBuildFile; fileRef = 91804EDE25C04E5800C38510 /* Core.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9190D19D25C43CF100969539 /* Resource.h in Headers */ = {isa = PBXBuildFile; fileRef = 9190D19B25C43CF100969539 /* Resource.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9190D1A625C43DD400969539 /* Color+App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9190D1A525C43DD400969539 /* Color+App.swift */; };
+		9190D1B325C4426500969539 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9190D1B225C4426500969539 /* Images.xcassets */; };
+		9190D1B725C443B500969539 /* Image+App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9190D1B625C443B500969539 /* Image+App.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		91804EDB25C04E5800C38510 /* Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		91804EDE25C04E5800C38510 /* Core.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Core.h; sourceTree = "<group>"; };
 		91804EDF25C04E5800C38510 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9190D19925C43CF100969539 /* Resource.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Resource.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9190D19B25C43CF100969539 /* Resource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Resource.h; sourceTree = "<group>"; };
+		9190D19C25C43CF100969539 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9190D1A525C43DD400969539 /* Color+App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+App.swift"; sourceTree = "<group>"; };
+		9190D1B225C4426500969539 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		9190D1B625C443B500969539 /* Image+App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Image+App.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		91804ED825C04E5800C38510 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9190D19625C43CF100969539 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -31,6 +48,7 @@
 			isa = PBXGroup;
 			children = (
 				91804EDD25C04E5800C38510 /* Core */,
+				9190D19A25C43CF100969539 /* Resource */,
 				91804EDC25C04E5800C38510 /* Products */,
 			);
 			indentWidth = 2;
@@ -41,6 +59,7 @@
 			isa = PBXGroup;
 			children = (
 				91804EDB25C04E5800C38510 /* Core.framework */,
+				9190D19925C43CF100969539 /* Resource.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -48,10 +67,54 @@
 		91804EDD25C04E5800C38510 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				9190D19325C43C9800969539 /* Config */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		9190D19325C43C9800969539 /* Config */ = {
+			isa = PBXGroup;
+			children = (
 				91804EDE25C04E5800C38510 /* Core.h */,
 				91804EDF25C04E5800C38510 /* Info.plist */,
 			);
-			path = Core;
+			path = Config;
+			sourceTree = "<group>";
+		};
+		9190D19A25C43CF100969539 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				9190D1B125C4423A00969539 /* Images */,
+				9190D1A425C43DA600969539 /* Colors */,
+				9190D1A325C43D5E00969539 /* Config */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		9190D1A325C43D5E00969539 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				9190D19B25C43CF100969539 /* Resource.h */,
+				9190D19C25C43CF100969539 /* Info.plist */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		9190D1A425C43DA600969539 /* Colors */ = {
+			isa = PBXGroup;
+			children = (
+				9190D1A525C43DD400969539 /* Color+App.swift */,
+			);
+			path = Colors;
+			sourceTree = "<group>";
+		};
+		9190D1B125C4423A00969539 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				9190D1B225C4426500969539 /* Images.xcassets */,
+				9190D1B625C443B500969539 /* Image+App.swift */,
+			);
+			path = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -62,6 +125,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				91804EE025C04E5800C38510 /* Core.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9190D19425C43CF100969539 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9190D19D25C43CF100969539 /* Resource.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,6 +157,24 @@
 			productReference = 91804EDB25C04E5800C38510 /* Core.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		9190D19825C43CF100969539 /* Resource */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9190D19E25C43CF100969539 /* Build configuration list for PBXNativeTarget "Resource" */;
+			buildPhases = (
+				9190D19425C43CF100969539 /* Headers */,
+				9190D19525C43CF100969539 /* Sources */,
+				9190D19625C43CF100969539 /* Frameworks */,
+				9190D19725C43CF100969539 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Resource;
+			productName = Resource;
+			productReference = 9190D19925C43CF100969539 /* Resource.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -96,6 +185,10 @@
 				TargetAttributes = {
 					91804EDA25C04E5800C38510 = {
 						CreatedOnToolsVersion = 12.3;
+					};
+					9190D19825C43CF100969539 = {
+						CreatedOnToolsVersion = 12.3;
+						LastSwiftMigration = 1230;
 					};
 				};
 			};
@@ -113,6 +206,7 @@
 			projectRoot = "";
 			targets = (
 				91804EDA25C04E5800C38510 /* Core */,
+				9190D19825C43CF100969539 /* Resource */,
 			);
 		};
 /* End PBXProject section */
@@ -125,6 +219,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		9190D19725C43CF100969539 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9190D1B325C4426500969539 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -132,6 +234,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9190D19525C43CF100969539 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9190D1A625C43DD400969539 /* Color+App.swift in Sources */,
+				9190D1B725C443B500969539 /* Image+App.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,14 +381,14 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
-				INFOPLIST_FILE = Core/Info.plist;
+				INFOPLIST_FILE = Core/Config/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.seasons.fantazia.Core;
+				PRODUCT_BUNDLE_IDENTIFIER = com.seasons.fantazia.core;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
@@ -295,14 +406,69 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
-				INFOPLIST_FILE = Core/Info.plist;
+				INFOPLIST_FILE = Core/Config/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.seasons.fantazia.Core;
+				PRODUCT_BUNDLE_IDENTIFIER = com.seasons.fantazia.core;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		9190D19F25C43CF100969539 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 7KW522KWZF;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
+				INFOPLIST_FILE = Resource/Config/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.seasons.fantazia.resource;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9190D1A025C43CF100969539 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 7KW522KWZF;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
+				INFOPLIST_FILE = Resource/Config/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.seasons.fantazia.resource;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
@@ -327,6 +493,15 @@
 			buildConfigurations = (
 				91804EE425C04E5800C38510 /* Debug */,
 				91804EE525C04E5800C38510 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9190D19E25C43CF100969539 /* Build configuration list for PBXNativeTarget "Resource" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9190D19F25C43CF100969539 /* Debug */,
+				9190D1A025C43CF100969539 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -17,7 +17,7 @@ public struct TopicsView: View {
   public var body: some View {
     NavigationView {
       TopicList(viewModel: $viewModel.dataSource)
-        .navigationTitle("Topic")
+        .navigationTitle("토픽")
         .padding(.bottom, 32)
         .edgesIgnoringSafeArea(.bottom)
     }

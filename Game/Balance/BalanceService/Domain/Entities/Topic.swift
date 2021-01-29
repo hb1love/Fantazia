@@ -7,6 +7,7 @@
 
 import Foundation
 import SwiftUI
+import Resource
 
 public struct Topic: Hashable, Codable, Identifiable {
   public var id: Int
@@ -18,22 +19,37 @@ public struct Topic: Hashable, Codable, Identifiable {
   
   var imageURL: String
   public var image: Image {
-    Image(imageURL)
+    imageURL.image
   }
   
-  public static var `default` = Topic(id: 1, type: .love, imageURL: "bg_love")
+  public static var `default` = Topic(id: 1, type: .all, imageURL: "bg_lover")
 }
 
 public enum TopicType: String, CaseIterable, Codable {
-  case love
+  case lover
   case life
+  case food
+  case ethics
+  case adult
+  case general
+  case all
   
   var name: String {
     switch self {
-    case .love:
+    case .lover:
       return "연애관"
     case .life:
-      return "가치관"
+      return "인생"
+    case .ethics:
+      return "윤리관"
+    case .food:
+      return "음식"
+    case .adult:
+      return "19"
+    case .general:
+      return "일반"
+    case .all:
+      return "전체"
     }
   }
 }
