@@ -15,10 +15,13 @@
       location = "container:"
       name = "Common">
       <FileRef
+         location = "group:Common/Core/Core.xcodeproj">
+      </FileRef>
+      <FileRef
          location = "group:Common/Logging/Logging.xcodeproj">
       </FileRef>
       <FileRef
-         location = "group:Common/Core/Core.xcodeproj">
+         location = "group:Common/Resource/Resource.xcodeproj">
       </FileRef>
    </Group>
    <FileRef

@@ -3,29 +3,39 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F6A0F57190251B7DBABCFB2 /* Pods_Balance.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 746367AD14ED78E096DDA038 /* Pods_Balance.framework */; };
+		6357FFA80BDD3DAE2A38F8A6 /* Pods_BalanceApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20FD60AE6EAF49ABF916F2EA /* Pods_BalanceApp.framework */; };
+		9148512F25C85E850075C41C /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9148512E25C85E850075C41C /* Category.swift */; };
 		91792D5725BC733C00B92430 /* TopicNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91792D5625BC733C00B92430 /* TopicNavigationBar.swift */; };
 		91792D5C25BC749100B92430 /* TopicList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91792D5B25BC749100B92430 /* TopicList.swift */; };
-		91792D5F25BDC60700B92430 /* questionData.json in Resources */ = {isa = PBXBuildFile; fileRef = 91792D5E25BDC60700B92430 /* questionData.json */; };
-		91792D6225BDC66000B92430 /* topicData.json in Resources */ = {isa = PBXBuildFile; fileRef = 91792D6125BDC66000B92430 /* topicData.json */; };
+		91792D6225BDC66000B92430 /* topicsData.json in Resources */ = {isa = PBXBuildFile; fileRef = 91792D6125BDC66000B92430 /* topicsData.json */; };
 		91804F4425C0654500C38510 /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91804F4325C0654500C38510 /* Core.framework */; };
 		91804F4525C0654500C38510 /* Core.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 91804F4325C0654500C38510 /* Core.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		91804F4825C0654800C38510 /* Logging.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91804F4725C0654800C38510 /* Logging.framework */; };
 		91804F4925C0654800C38510 /* Logging.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 91804F4725C0654800C38510 /* Logging.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		91804F4B25C0656300C38510 /* Logging.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91804F4A25C0656300C38510 /* Logging.framework */; };
 		91804F4C25C0656300C38510 /* Logging.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 91804F4A25C0656300C38510 /* Logging.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		91804FF725C06A9800C38510 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 91804FF025C06A8B00C38510 /* Assets.xcassets */; };
 		91804FFB25C06AB300C38510 /* BalanceApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91804FEF25C06A8B00C38510 /* BalanceApp.swift */; };
 		9180500025C06ACD00C38510 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 91804FEC25C06A8B00C38510 /* Preview Assets.xcassets */; };
 		9180500625C06B2000C38510 /* Balance.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91D28F2125B45532002B72B4 /* Balance.framework */; };
 		9180500725C06B2000C38510 /* Balance.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 91D28F2125B45532002B72B4 /* Balance.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		9180500C25C06B2D00C38510 /* Logging.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9180500B25C06B2D00C38510 /* Logging.framework */; };
 		9180500D25C06B2D00C38510 /* Logging.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9180500B25C06B2D00C38510 /* Logging.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		9190D1AA25C43F5B00969539 /* Resource.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9190D1A925C43F5B00969539 /* Resource.framework */; };
-		9190D1AB25C43F5B00969539 /* Resource.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9190D1A925C43F5B00969539 /* Resource.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		918A0FB525CC646D003310ED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 918A0FB425CC646D003310ED /* Assets.xcassets */; };
+		918A0FD825CC66CC003310ED /* BalanceService.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91D28EF025B45145002B72B4 /* BalanceService.framework */; };
+		918A0FD925CC66CC003310ED /* BalanceService.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 91D28EF025B45145002B72B4 /* BalanceService.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		918A0FFD25CC675D003310ED /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 918A0FFC25CC675D003310ED /* Core.framework */; };
+		918A0FFE25CC675D003310ED /* Core.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 918A0FFC25CC675D003310ED /* Core.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		91909C7225CD7802001D1DE5 /* Resource.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91909C7125CD7802001D1DE5 /* Resource.framework */; };
+		91909C7325CD7802001D1DE5 /* Resource.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 91909C7125CD7802001D1DE5 /* Resource.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		91909C7525CD7811001D1DE5 /* Resource.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91909C7425CD7811001D1DE5 /* Resource.framework */; };
+		91909C7625CD7811001D1DE5 /* Resource.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 91909C7425CD7811001D1DE5 /* Resource.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		91909C9F25CEFD4B001D1DE5 /* Resource.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91909C9E25CEFD4B001D1DE5 /* Resource.framework */; };
+		91909CA025CEFD4B001D1DE5 /* Resource.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 91909C9E25CEFD4B001D1DE5 /* Resource.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		919DD6A125BF0235007D735C /* TopicListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 919DD6A025BF0235007D735C /* TopicListModel.swift */; };
 		919DD6A625BF117E007D735C /* QuestionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 919DD6A525BF117E007D735C /* QuestionsView.swift */; };
 		919DD6A925BF118A007D735C /* QuestionsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 919DD6A825BF118A007D735C /* QuestionsViewModel.swift */; };
@@ -55,6 +65,13 @@
 			remoteGlobalIDString = 91D28F2025B45532002B72B4;
 			remoteInfo = Balance;
 		};
+		918A0FDA25CC66CC003310ED /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 91D28ECA25B44AF5002B72B4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 91D28EEF25B45145002B72B4;
+			remoteInfo = BalanceService;
+		};
 		91D28F4D25B45668002B72B4 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 91D28ECA25B44AF5002B72B4 /* Project object */;
@@ -72,6 +89,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				91804F4925C0654800C38510 /* Logging.framework in Embed Frameworks */,
+				91909CA025CEFD4B001D1DE5 /* Resource.framework in Embed Frameworks */,
 				91804F4525C0654500C38510 /* Core.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -84,7 +102,10 @@
 			dstSubfolderSpec = 10;
 			files = (
 				9180500D25C06B2D00C38510 /* Logging.framework in Embed Frameworks */,
+				918A0FD925CC66CC003310ED /* BalanceService.framework in Embed Frameworks */,
+				918A0FFE25CC675D003310ED /* Core.framework in Embed Frameworks */,
 				9180500725C06B2000C38510 /* Balance.framework in Embed Frameworks */,
+				91909C7625CD7811001D1DE5 /* Resource.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -96,7 +117,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				91804F4C25C0656300C38510 /* Logging.framework in Embed Frameworks */,
-				9190D1AB25C43F5B00969539 /* Resource.framework in Embed Frameworks */,
+				91909C7325CD7802001D1DE5 /* Resource.framework in Embed Frameworks */,
 				91D28F4C25B45668002B72B4 /* BalanceService.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -105,19 +126,30 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		04E0BE49308283BAEF297F3D /* Pods-BalanceApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BalanceApp.debug.xcconfig"; path = "Target Support Files/Pods-BalanceApp/Pods-BalanceApp.debug.xcconfig"; sourceTree = "<group>"; };
+		0E20F975A9F4DEEDAE11FB57 /* Pods-Balance.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Balance.debug.xcconfig"; path = "Target Support Files/Pods-Balance/Pods-Balance.debug.xcconfig"; sourceTree = "<group>"; };
+		20FD60AE6EAF49ABF916F2EA /* Pods_BalanceApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BalanceApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		37777159B33ED4EF538D6D7F /* Pods-Balance.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Balance.release.xcconfig"; path = "Target Support Files/Pods-Balance/Pods-Balance.release.xcconfig"; sourceTree = "<group>"; };
+		746367AD14ED78E096DDA038 /* Pods_Balance.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Balance.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7B3B0AFBEBE0289D05C2097A /* Pods-BalanceApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BalanceApp.release.xcconfig"; path = "Target Support Files/Pods-BalanceApp/Pods-BalanceApp.release.xcconfig"; sourceTree = "<group>"; };
+		9148512E25C85E850075C41C /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		91792D5625BC733C00B92430 /* TopicNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicNavigationBar.swift; sourceTree = "<group>"; };
 		91792D5B25BC749100B92430 /* TopicList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicList.swift; sourceTree = "<group>"; };
-		91792D5E25BDC60700B92430 /* questionData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = questionData.json; sourceTree = "<group>"; };
-		91792D6125BDC66000B92430 /* topicData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = topicData.json; sourceTree = "<group>"; };
+		91792D6125BDC66000B92430 /* topicsData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = topicsData.json; sourceTree = "<group>"; };
 		91804F4325C0654500C38510 /* Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		91804F4725C0654800C38510 /* Logging.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Logging.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		91804F4A25C0656300C38510 /* Logging.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Logging.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		91804FDA25C06A5800C38510 /* BalanceApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BalanceApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		91804FEC25C06A8B00C38510 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		91804FEE25C06A8B00C38510 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = BalanceApp/Info.plist; sourceTree = "<group>"; };
 		91804FEF25C06A8B00C38510 /* BalanceApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BalanceApp.swift; path = BalanceApp/BalanceApp.swift; sourceTree = "<group>"; };
-		91804FF025C06A8B00C38510 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = BalanceApp/Assets.xcassets; sourceTree = "<group>"; };
 		9180500B25C06B2D00C38510 /* Logging.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Logging.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		918A0FB425CC646D003310ED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../../Fantazia/Fantazia/Assets.xcassets; sourceTree = "<group>"; };
+		918A0FD625CC666E003310ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; name = Info.plist; path = BalanceApp/Config/Info.plist; sourceTree = SOURCE_ROOT; };
+		918A0FDC25CC66CF003310ED /* Resource.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Resource.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		918A0FFC25CC675D003310ED /* Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		91909C7125CD7802001D1DE5 /* Resource.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Resource.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		91909C7425CD7811001D1DE5 /* Resource.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Resource.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		91909C9E25CEFD4B001D1DE5 /* Resource.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Resource.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9190D1A925C43F5B00969539 /* Resource.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Resource.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		919DD6A025BF0235007D735C /* TopicListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicListModel.swift; sourceTree = "<group>"; };
 		919DD6A525BF117E007D735C /* QuestionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsView.swift; sourceTree = "<group>"; };
@@ -148,7 +180,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				9180500C25C06B2D00C38510 /* Logging.framework in Frameworks */,
+				918A0FD825CC66CC003310ED /* BalanceService.framework in Frameworks */,
+				918A0FFD25CC675D003310ED /* Core.framework in Frameworks */,
 				9180500625C06B2000C38510 /* Balance.framework in Frameworks */,
+				91909C7525CD7811001D1DE5 /* Resource.framework in Frameworks */,
+				6357FFA80BDD3DAE2A38F8A6 /* Pods_BalanceApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -157,6 +193,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				91804F4825C0654800C38510 /* Logging.framework in Frameworks */,
+				91909C9F25CEFD4B001D1DE5 /* Resource.framework in Frameworks */,
 				91804F4425C0654500C38510 /* Core.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -166,14 +203,27 @@
 			buildActionMask = 2147483647;
 			files = (
 				91804F4B25C0656300C38510 /* Logging.framework in Frameworks */,
-				9190D1AA25C43F5B00969539 /* Resource.framework in Frameworks */,
 				91D28F4B25B45668002B72B4 /* BalanceService.framework in Frameworks */,
+				91909C7225CD7802001D1DE5 /* Resource.framework in Frameworks */,
+				3F6A0F57190251B7DBABCFB2 /* Pods_Balance.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7F25ACF5AAF877C045D9E399 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0E20F975A9F4DEEDAE11FB57 /* Pods-Balance.debug.xcconfig */,
+				37777159B33ED4EF538D6D7F /* Pods-Balance.release.xcconfig */,
+				04E0BE49308283BAEF297F3D /* Pods-BalanceApp.debug.xcconfig */,
+				7B3B0AFBEBE0289D05C2097A /* Pods-BalanceApp.release.xcconfig */,
+			);
+			name = Pods;
+			path = ../../Pods;
+			sourceTree = "<group>";
+		};
 		91792D5925BC734500B92430 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -188,9 +238,9 @@
 		91804FEA25C06A6400C38510 /* BalanceApp */ = {
 			isa = PBXGroup;
 			children = (
-				91804FF025C06A8B00C38510 /* Assets.xcassets */,
+				918A0FB425CC646D003310ED /* Assets.xcassets */,
 				91804FEF25C06A8B00C38510 /* BalanceApp.swift */,
-				91804FEE25C06A8B00C38510 /* Info.plist */,
+				918A0FD525CC662E003310ED /* Config */,
 				91804FEB25C06A8B00C38510 /* Preview Content */,
 			);
 			name = BalanceApp;
@@ -203,6 +253,14 @@
 			);
 			name = "Preview Content";
 			path = "BalanceApp/Preview Content";
+			sourceTree = "<group>";
+		};
+		918A0FD525CC662E003310ED /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				918A0FD625CC666E003310ED /* Info.plist */,
+			);
+			path = Config;
 			sourceTree = "<group>";
 		};
 		919DD6A425BF1135007D735C /* Question */ = {
@@ -231,6 +289,7 @@
 				91804FEA25C06A6400C38510 /* BalanceApp */,
 				91D28ED325B44AF5002B72B4 /* Products */,
 				91D28F4A25B45668002B72B4 /* Frameworks */,
+				7F25ACF5AAF877C045D9E399 /* Pods */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -281,6 +340,7 @@
 				91D28F1725B452BB002B72B4 /* Topic.swift */,
 				919DD6AD25BF158E007D735C /* Question.swift */,
 				91D28F5C25B46225002B72B4 /* BalanceError.swift */,
+				9148512E25C85E850075C41C /* Category.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -326,11 +386,18 @@
 		91D28F4A25B45668002B72B4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				91909C9E25CEFD4B001D1DE5 /* Resource.framework */,
+				91909C7425CD7811001D1DE5 /* Resource.framework */,
+				91909C7125CD7802001D1DE5 /* Resource.framework */,
+				918A0FFC25CC675D003310ED /* Core.framework */,
+				918A0FDC25CC66CF003310ED /* Resource.framework */,
 				9190D1A925C43F5B00969539 /* Resource.framework */,
 				9180500B25C06B2D00C38510 /* Logging.framework */,
 				91804F4A25C0656300C38510 /* Logging.framework */,
 				91804F4725C0654800C38510 /* Logging.framework */,
 				91804F4325C0654500C38510 /* Core.framework */,
+				746367AD14ED78E096DDA038 /* Pods_Balance.framework */,
+				20FD60AE6EAF49ABF916F2EA /* Pods_BalanceApp.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -340,8 +407,7 @@
 			children = (
 				91D28F5825B45A99002B72B4 /* Client.swift */,
 				91D28F5425B459C8002B72B4 /* BalanceAPI.swift */,
-				91792D5E25BDC60700B92430 /* questionData.json */,
-				91792D6125BDC66000B92430 /* topicData.json */,
+				91792D6125BDC66000B92430 /* topicsData.json */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -372,15 +438,18 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 91804FE625C06A5900C38510 /* Build configuration list for PBXNativeTarget "BalanceApp" */;
 			buildPhases = (
+				54D653EEC8774EC48B333221 /* [CP] Check Pods Manifest.lock */,
 				91804FD625C06A5800C38510 /* Sources */,
 				91804FD725C06A5800C38510 /* Frameworks */,
 				91804FD825C06A5800C38510 /* Resources */,
 				9180500A25C06B2000C38510 /* Embed Frameworks */,
+				34E3649ABD8CAD04F3D44721 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 				9180500925C06B2000C38510 /* PBXTargetDependency */,
+				918A0FDB25CC66CC003310ED /* PBXTargetDependency */,
 			);
 			name = BalanceApp;
 			productName = BalanceApp;
@@ -396,6 +465,7 @@
 				91D28EED25B45145002B72B4 /* Frameworks */,
 				91D28EEE25B45145002B72B4 /* Resources */,
 				91804F4625C0654500C38510 /* Embed Frameworks */,
+				91909CB625CF11DD001D1DE5 /* Remove Duplicated Frameworks */,
 			);
 			buildRules = (
 			);
@@ -410,11 +480,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 91D28F2A25B45532002B72B4 /* Build configuration list for PBXNativeTarget "Balance" */;
 			buildPhases = (
+				D5DBB795FB15273D28258E56 /* [CP] Check Pods Manifest.lock */,
 				91D28F1C25B45532002B72B4 /* Headers */,
 				91D28F1D25B45532002B72B4 /* Sources */,
 				91D28F1E25B45532002B72B4 /* Frameworks */,
 				91D28F1F25B45532002B72B4 /* Resources */,
 				91D28F4F25B45668002B72B4 /* Embed Frameworks */,
+				91909CB525CF111F001D1DE5 /* Remove Duplicated Frameworks */,
 			);
 			buildRules = (
 			);
@@ -473,8 +545,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				918A0FB525CC646D003310ED /* Assets.xcassets in Resources */,
 				9180500025C06ACD00C38510 /* Preview Assets.xcassets in Resources */,
-				91804FF725C06A9800C38510 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -482,8 +554,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				91792D5F25BDC60700B92430 /* questionData.json in Resources */,
-				91792D6225BDC66000B92430 /* topicData.json in Resources */,
+				91792D6225BDC66000B92430 /* topicsData.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -495,6 +566,106 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		34E3649ABD8CAD04F3D44721 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BalanceApp/Pods-BalanceApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BalanceApp/Pods-BalanceApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BalanceApp/Pods-BalanceApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		54D653EEC8774EC48B333221 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BalanceApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		91909CB525CF111F001D1DE5 /* Remove Duplicated Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Remove Duplicated Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "cd \"${CONFIGURATION_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/\"\nif [[ -d \"Frameworks\" ]]; then \n    rm -fr Frameworks\nfi\n";
+		};
+		91909CB625CF11DD001D1DE5 /* Remove Duplicated Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Remove Duplicated Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "cd \"${CONFIGURATION_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/\"\nif [[ -d \"Frameworks\" ]]; then \n    rm -fr Frameworks\nfi\n";
+		};
+		D5DBB795FB15273D28258E56 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Balance-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		91804FD625C06A5800C38510 /* Sources */ = {
@@ -516,6 +687,7 @@
 				91D28F5925B45A99002B72B4 /* Client.swift in Sources */,
 				91D28F8525B4682E002B72B4 /* BalanceServiceModule.swift in Sources */,
 				91D28F5525B459C8002B72B4 /* BalanceAPI.swift in Sources */,
+				9148512F25C85E850075C41C /* Category.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -544,6 +716,11 @@
 			target = 91D28F2025B45532002B72B4 /* Balance */;
 			targetProxy = 9180500825C06B2000C38510 /* PBXContainerItemProxy */;
 		};
+		918A0FDB25CC66CC003310ED /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 91D28EEF25B45145002B72B4 /* BalanceService */;
+			targetProxy = 918A0FDA25CC66CC003310ED /* PBXContainerItemProxy */;
+		};
 		91D28F4E25B45668002B72B4 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 91D28EEF25B45145002B72B4 /* BalanceService */;
@@ -554,6 +731,7 @@
 /* Begin XCBuildConfiguration section */
 		91804FE725C06A5900C38510 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 04E0BE49308283BAEF297F3D /* Pods-BalanceApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -562,13 +740,13 @@
 				DEVELOPMENT_TEAM = 7KW522KWZF;
 				ENABLE_PREVIEWS = YES;
 				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
-				INFOPLIST_FILE = BalanceApp/Info.plist;
+				INFOPLIST_FILE = BalanceApp/Config/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.seasons.fantazia.BalanceApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.seasons.fantazia.balanceapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -577,6 +755,7 @@
 		};
 		91804FE825C06A5900C38510 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7B3B0AFBEBE0289D05C2097A /* Pods-BalanceApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -585,13 +764,13 @@
 				DEVELOPMENT_TEAM = 7KW522KWZF;
 				ENABLE_PREVIEWS = YES;
 				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
-				INFOPLIST_FILE = BalanceApp/Info.plist;
+				INFOPLIST_FILE = BalanceApp/Config/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.seasons.fantazia.BalanceApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.seasons.fantazia.balanceapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -777,6 +956,7 @@
 		};
 		91D28F2B25B45532002B72B4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0E20F975A9F4DEEDAE11FB57 /* Pods-Balance.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -808,6 +988,7 @@
 		};
 		91D28F2C25B45532002B72B4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 37777159B33ED4EF538D6D7F /* Pods-Balance.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;

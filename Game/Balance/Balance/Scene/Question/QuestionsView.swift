@@ -8,9 +8,13 @@
 import SwiftUI
 import BalanceService
 import Resource
+import Core
+//import GoogleMobileAds
 
 public struct QuestionsView: View {
-  
+
+//  var interstitial: Interstitial = Interstitial()
+
   @ObservedObject var viewModel: QuestionsViewModel
   
   public var body: some View {
@@ -31,8 +35,8 @@ public struct QuestionsView: View {
           }, label: {
             "ic_prev".image
           })
-
           Button(action: {
+//            interstitial.showAd()
             viewModel.apply(.onNext)
           }, label: {
             "ic_next".image
@@ -45,7 +49,9 @@ public struct QuestionsView: View {
         .shadow(radius: 10)
         .padding(.bottom, 8)
       }
-    }.navigationTitle(viewModel.title)
+    }
+    .font(Font.preferredFont(type: .nanumBarunpenB, size: 24))
+    .navigationTitle(viewModel.title)
   }
 }
 
@@ -54,5 +60,3 @@ struct QuestionsView_Previews: PreviewProvider {
     BalanceModule.questionsView(topic: topics[0])
   }
 }
-
-

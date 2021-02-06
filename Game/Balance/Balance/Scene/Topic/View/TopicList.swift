@@ -7,9 +7,14 @@
 
 import SwiftUI
 import BalanceService
+import Logging
 
 struct TopicList: View {
-  @Binding var viewModel: TopicListModel
+  @Binding var viewModel: TopicListModel {
+    didSet {
+      log.debug(viewModel)
+    }
+  }
   
   var body: some View {
     GeometryReader { geometry in

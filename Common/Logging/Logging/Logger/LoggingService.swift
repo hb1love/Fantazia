@@ -9,10 +9,11 @@ import os
 
 public enum LogEvent: String {
   case topics
+  case topic
 }
 
 public protocol LoggingService {
-  func log(event: LogEvent)
+  func event(_ event: LogEvent)
   func debug(_ items: Any...)
   func info(_ items: Any...)
   func trace(_ items: Any...)
@@ -22,42 +23,53 @@ public protocol LoggingService {
 
 final class FLoggingService: LoggingService {
 
-  func log(event: LogEvent) {
+  let logger = Logger()
+
+  func event(_ event: LogEvent) {
     info(event.rawValue)
   }
 
   func debug(_ items: Any...) {
+    let message = self.message(from: items, prefix: "💙")
     if LoggingModule.logEnvironment.contains(.console) {
-      logger.debug("💜 \(self.message(from: items))")
+      logger.debug("\(message)")
     }
   }
 
   func info(_ items: Any...) {
+    let message = self.message(from: items, prefix: "💚")
     if LoggingModule.logEnvironment.contains(.console) {
-      logger.info("💚 \(self.message(from: items))")
+      logger.info("\(message)")
     }
   }
 
   func trace(_ items: Any...) {
+    let message = self.message(from: items, prefix: "💜")
     if LoggingModule.logEnvironment.contains(.console) {
-      logger.trace("💙 \(self.message(from: items))")
+      logger.trace("\(message)")
     }
   }
 
   func warning(_ items: Any...) {
+    let message = self.message(from: items, prefix: "💛")
     if LoggingModule.logEnvironment.contains(.console) {
-      logger.warning("💛 \(self.message(from: items))")
+      logger.warning("\(message)")
     }
   }
 
   func error(_ items: Any...) {
+    let message = self.message(from: items, prefix: "❤️")
     if LoggingModule.logEnvironment.contains(.console) {
-      logger.error("❤️ \(self.message(from: items))")
+      logger.error("\(message)")
     }
   }
 
+  private func message(from items: [Any], prefix: String) -> String {
+    [prefix, message(from: items)].joined(separator: " ")
+  }
+
   private func message(from items: [Any]) -> String {
-    return items
+    items
       .map { String(describing: $0) }
       .joined(separator: " ")
   }

@@ -5,8 +5,10 @@
 //  Created by hbkim on 2021/01/17.
 //
 
+import SwiftUI
 import BalanceService
 import Logging
+import Resource
 
 public protocol BalanceConfiguration: BalanceServiceConfiguration {}
 
@@ -20,6 +22,7 @@ public class BalanceModule {
   }
 
   public static func setup(with config: BalanceConfiguration.Type) {
+    Font.loadAllFonts()
     BalanceModule.config = config
     BalanceServiceModule.setup(with: config)
     LoggingModule.addEnvironment(.console)

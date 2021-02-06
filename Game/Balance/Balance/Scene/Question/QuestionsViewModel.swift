@@ -88,7 +88,7 @@ final class QuestionsViewModel: ObservableObject, Identifiable {
       .store(in: &cancellables)
     
     trackingSubject
-      .sink(receiveValue: loggingService.log)
+      .sink(receiveValue: loggingService.event)
       .store(in: &cancellables)
   }
   

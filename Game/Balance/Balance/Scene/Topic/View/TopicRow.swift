@@ -19,7 +19,7 @@ struct TopicRow: View {
         .shadow(color: .gray, radius: 10)
 
       Text(topic.title)
-        .font(Font.system(size: 24, design: .default))
+        .font(Font.preferredFont(type: .nanumBarunpenB, size: 24))
         .foregroundColor(Color.white)
     }
     .padding(.vertical, 16)

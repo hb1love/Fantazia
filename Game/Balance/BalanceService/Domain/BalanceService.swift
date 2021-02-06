@@ -16,7 +16,6 @@ public protocol BalanceService {
 
 class BalanceGameService: BalanceService {
   @State var _topics: [Topic] = []
-  @State var _questions: [Question] = []
 
   private let loggingService: LoggingService
 
@@ -34,30 +33,20 @@ class BalanceGameService: BalanceService {
     }
     
     return BalanceAPI.topics()
-      .mapError { _ -> BalanceError in
-        .noTopic
+      .handleEvents(receiveOutput: {
+        self._topics = $0
+      })
+      .mapError { error -> BalanceError in
+        .request(reason: error)
       }
       .eraseToAnyPublisher()
   }
   
   func getQuestions(topic: Topic) -> AnyPublisher<[Question], BalanceError> {
-    #if DEBUG
-    let topic = Topic.default
-    #else
-    guard _questions.isEmpty else {
-      return Just(_questions.filter { $0.types.contains(topic.type) }.shuffled())
-        .mapError { _ -> BalanceError in
-          .noQuestion
-        }
-        .eraseToAnyPublisher()
-    }
-    #endif
-
-    return BalanceAPI.questions()
-      .handleEvents(receiveOutput: {
-                      self._questions = $0
-      })
-      .map { $0.filter { $0.topicIds.contains(topic.id) }}
+    return BalanceAPI.topic(id: topic.id)
+      .map { (topic: Topic) -> [Question] in
+        return topic.questions
+      }
       .map { $0.shuffled() }
       .mapError { _ -> BalanceError in
         self.loggingService.error(BalanceError.noTopic)

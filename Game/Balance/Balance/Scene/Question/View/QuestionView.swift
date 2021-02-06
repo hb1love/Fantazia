@@ -18,7 +18,7 @@ struct QuestionView: View {
       VStack(spacing: 16) {
         Text(question.q ?? "")
           .foregroundColor(Color.black)
-          .font(Font.system(size: 18, weight: .bold, design: .rounded))
+          .font(Font.preferredFont(type: .nanumBarunpenB, size: 18))
         AnswerButton(title: question.a, color: Color.questionA)
         AnswerButton(title: question.b, color: Color.questionB)
       }
@@ -30,7 +30,7 @@ struct QuestionView: View {
       viewModel.apply(.onNext)
     }, label: {
       Text(title)
-        .font(Font.system(size: 24, weight: .bold, design: .rounded))
+        .font(Font.preferredFont(type: .nanumBarunpenB, size: 24))
         .multilineTextAlignment(.center)
         .padding()
         .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity)

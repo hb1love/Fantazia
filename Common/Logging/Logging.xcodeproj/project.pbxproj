@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		91804F2A25C0540000C38510 /* Logging.h in Headers */ = {isa = PBXBuildFile; fileRef = 91804F2825C0540000C38510 /* Logging.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		91804F3525C0548C00C38510 /* LoggingModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91804F3425C0548C00C38510 /* LoggingModule.swift */; };
-		91804F3825C054C700C38510 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91804F3725C054C700C38510 /* Logger.swift */; };
 		91804F3E25C05A1000C38510 /* LogEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91804F3D25C05A1000C38510 /* LogEnvironment.swift */; };
 		91804F4125C05C3900C38510 /* LoggingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91804F4025C05C3900C38510 /* LoggingService.swift */; };
 /* End PBXBuildFile section */
@@ -19,7 +18,6 @@
 		91804F2825C0540000C38510 /* Logging.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Logging.h; sourceTree = "<group>"; };
 		91804F2925C0540000C38510 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		91804F3425C0548C00C38510 /* LoggingModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggingModule.swift; sourceTree = "<group>"; };
-		91804F3725C054C700C38510 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		91804F3D25C05A1000C38510 /* LogEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogEnvironment.swift; sourceTree = "<group>"; };
 		91804F4025C05C3900C38510 /* LoggingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggingService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -75,7 +73,6 @@
 		91804F3A25C055F000C38510 /* Logger */ = {
 			isa = PBXGroup;
 			children = (
-				91804F3725C054C700C38510 /* Logger.swift */,
 				91804F3D25C05A1000C38510 /* LogEnvironment.swift */,
 				91804F4025C05C3900C38510 /* LoggingService.swift */,
 			);
@@ -104,6 +101,7 @@
 				91804F2125C0540000C38510 /* Sources */,
 				91804F2225C0540000C38510 /* Frameworks */,
 				91804F2325C0540000C38510 /* Resources */,
+				91909CB825CF120F001D1DE5 /* Remove Duplicated Frameworks */,
 			);
 			buildRules = (
 			);
@@ -156,13 +154,33 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		91909CB825CF120F001D1DE5 /* Remove Duplicated Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Remove Duplicated Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "cd \"${CONFIGURATION_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/\"\nif [[ -d \"Frameworks\" ]]; then \n    rm -fr Frameworks\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		91804F2125C0540000C38510 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				91804F3525C0548C00C38510 /* LoggingModule.swift in Sources */,
-				91804F3825C054C700C38510 /* Logger.swift in Sources */,
 				91804F3E25C05A1000C38510 /* LogEnvironment.swift in Sources */,
 				91804F4125C05C3900C38510 /* LoggingService.swift in Sources */,
 			);
@@ -311,7 +329,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.seasons.fantazia.Logging;
+				PRODUCT_BUNDLE_IDENTIFIER = com.seasons.fantazia.logging;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -338,7 +356,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.seasons.fantazia.Logging;
+				PRODUCT_BUNDLE_IDENTIFIER = com.seasons.fantazia.logging;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;

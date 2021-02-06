@@ -1,0 +1,51 @@
+[
+  {
+    "id": 1,
+    "category": "general",
+    "title": "일반",
+    "questions": [
+      {
+        "id": 2,
+        "q": "",
+        "a": "하루에 세 번",
+        "b": "세 달에 한 번"
+      },
+      {
+        "id": 3,
+        "q": "한 달 동안 이 고기를 먹어야 한다면?",
+        "a": "소고기",
+        "b": "돼지고기"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "category": "lover",
+    "title": "연애관",
+    "questions": []
+  },
+  {
+    "id": 3,
+    "category": "life",
+    "title": "가치관",
+    "questions": []
+  },
+  {
+    "id": 4,
+    "category": "ethics",
+    "title": "윤리",
+    "questions": []
+  },
+  {
+    "id": 5,
+    "category": "adult",
+    "title": "19",
+    "questions": []
+  },
+  {
+    "id": 6,
+    "category": "food",
+    "title": "음식",
+    "questions": []
+  }
+]

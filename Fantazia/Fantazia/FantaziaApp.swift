@@ -10,34 +10,20 @@ import Balance
 import BalanceService
 import Logging
 import Core
+import Resource
 import Firebase
-import FirebaseFirestore
+//import GoogleMobileAds
 
 @main
 struct FantaziaApp: App {
   @Environment(\.scenePhase) private var scenePhase
 
   init() {
+    Font.loadAllFonts()
     FirebaseApp.configure()
+//    GADMobileAds.sharedInstance().start(completionHandler: nil)
     LoggingModule.addEnvironment(.console)
     BalanceModule.setup(with: Self.self)
-
-    let settings = Firestore.firestore().settings
-    settings.host = "localhost:8080"
-    settings.isPersistenceEnabled = false
-    settings.isSSLEnabled = false
-    Firestore.firestore().settings = settings
-    let db = Firestore.firestore()
-    db.collection("topics").getDocuments { (querySnapshot, err) in
-      if let err = err {
-        print("Error getting documents: \(err)")
-      } else {
-        for document in querySnapshot!.documents {
-          print("\(document.documentID) => \(document.data())")
-        }
-      }
-    }
-
   }
 
   var body: some Scene {
@@ -47,13 +33,13 @@ struct FantaziaApp: App {
     .onChange(of: scenePhase) { (newScenePhase) in
       switch newScenePhase {
       case .active:
-        logger.info("scene is now active!")
+        log.info("scene is now active!")
       case .inactive:
-        logger.info("scene is now inactive!")
+        log.info("scene is now inactive!")
       case .background:
-        logger.info("scene is now in the background!")
+        log.info("scene is now in the background!")
       @unknown default:
-        logger.info("Apple must have added something new!")
+        log.info("Apple must have added something new!")
       }
     }
   }
@@ -61,6 +47,10 @@ struct FantaziaApp: App {
 
 extension FantaziaApp: BalanceConfiguration, BalanceServiceConfiguration {
   static var baseUrl: String {
-    ""
+    #if DEBUG
+    return "http://ec2-13-125-208-107.ap-northeast-2.compute.amazonaws.com:8080/api"
+    #else
+    return "http://ec2-13-125-208-107.ap-northeast-2.compute.amazonaws.com:8080/api"
+    #endif
   }
 }

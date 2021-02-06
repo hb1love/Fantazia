@@ -7,27 +7,28 @@
 
 import Combine
 
-public var topics: [Topic] = load("topicData.json")
-public var questions: [Question] = load("questionData.json")
+public var topics: [Topic] = load("topicsData.json")
+public var questions: [Question] = {
+  let topics: [Topic] = load("topicsData.json")
+  return topics.first!.questions
+}()
 
 enum BalanceAPI {
-  private static let base = URL(string: "http://")!
+  private static var baseURL: URL {
+    URL(string: BalanceServiceModule.baseUrl)!
+  }
   private static let client = Client()
   
-  static func topics() -> AnyPublisher<[Topic], Error> {
-    let topics: [Topic] = load("topicData.json")
-    return Just(topics)
-      .setFailureType(to: Error.self)
-      .eraseToAnyPublisher()
-//    let request = URLComponents(url: base.appendingPathComponent("topics"), resolvingAgainstBaseURL: true)?.request
-//    return client.send(request!)
+  static func topics() -> AnyPublisher<[Topic], APIError> {
+    let url = baseURL.appendingPathComponent("topics")
+    let request = URLComponents(url: url, resolvingAgainstBaseURL: true)?.request
+    return client.send(request!)
   }
   
-  static func questions() -> AnyPublisher<[Question], Error> {
-    let questions: [Question] = load("questionData.json")
-    return Just(questions)
-      .setFailureType(to: Error.self)
-      .eraseToAnyPublisher()
+  static func topic(id: Int64) -> AnyPublisher<Topic, APIError> {
+    let url = baseURL.appendingPathComponent("topics/\(id)")
+    let request = URLComponents(url: url, resolvingAgainstBaseURL: true)?.request
+    return client.send(request!)
   }
 }
 

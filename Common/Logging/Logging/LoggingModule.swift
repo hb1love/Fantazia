@@ -7,6 +7,8 @@
 
 import os
 
+public let log = LoggingModule.loggingService
+
 public class LoggingModule {
   static var logEnvironment: [LogEnvironment] = [.console]
 
@@ -16,7 +18,5 @@ public class LoggingModule {
 }
 
 public extension LoggingModule {
-  static var loggingService: LoggingService = {
-    FLoggingService()
-  }()
+  static var loggingService: LoggingService = FLoggingService()
 }

@@ -5,6 +5,7 @@
 //  Created by hbkim on 2021/01/17.
 //
 
+import SwiftUI
 import Combine
 import BalanceService
 import Logging
@@ -67,7 +68,7 @@ final class TopicsViewModel: ObservableObject, Identifiable {
       .store(in: &cancellables)
     
     trackingSubject
-      .sink(receiveValue: loggingService.log)
+      .sink(receiveValue: loggingService.event)
       .store(in: &cancellables)
   }
   
@@ -89,5 +90,3 @@ final class TopicsViewModel: ObservableObject, Identifiable {
       .store(in: &cancellables)
   }
 }
-
-

@@ -17,11 +17,19 @@
 		9180501425C0711C00C38510 /* Core.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9180501225C0711C00C38510 /* Core.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		9180501625C0711E00C38510 /* Logging.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9180501525C0711E00C38510 /* Logging.framework */; };
 		9180501725C0711E00C38510 /* Logging.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9180501525C0711E00C38510 /* Logging.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		9190D1AD25C43F6200969539 /* Resource.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9190D1AC25C43F6200969539 /* Resource.framework */; };
-		9190D1AE25C43F6200969539 /* Resource.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9190D1AC25C43F6200969539 /* Resource.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		91909C7825CD781A001D1DE5 /* Resource.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91909C7725CD781A001D1DE5 /* Resource.framework */; };
+		91909C7925CD781A001D1DE5 /* Resource.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 91909C7725CD781A001D1DE5 /* Resource.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		91909CD325CF17EA001D1DE5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91909CD225CF17EA001D1DE5 /* AppDelegate.swift */; };
+		91909CD525CF17EA001D1DE5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91909CD425CF17EA001D1DE5 /* SceneDelegate.swift */; };
+		91909CD725CF17EA001D1DE5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91909CD625CF17EA001D1DE5 /* ContentView.swift */; };
+		91909CD925CF17EC001D1DE5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 91909CD825CF17EC001D1DE5 /* Assets.xcassets */; };
+		91909CDC25CF17EC001D1DE5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 91909CDB25CF17EC001D1DE5 /* Preview Assets.xcassets */; };
+		91909CDF25CF17EC001D1DE5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91909CDD25CF17EC001D1DE5 /* LaunchScreen.storyboard */; };
+		9190D1F125C460A100969539 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9190D1EE25C460A100969539 /* GoogleService-Info.plist */; };
+		9190D1F225C460A100969539 /* Base.debug.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 9190D1EF25C460A100969539 /* Base.debug.xcconfig */; };
+		9190D1F325C460A100969539 /* Base.release.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 9190D1F025C460A100969539 /* Base.release.xcconfig */; };
 		91B2798225C0781F00E583C9 /* BalanceService.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91B2798125C0781F00E583C9 /* BalanceService.framework */; };
 		91B2798325C0781F00E583C9 /* BalanceService.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 91B2798125C0781F00E583C9 /* BalanceService.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		91E1EAFF25C07C5B005D31DB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9180501825C0755200C38510 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -35,7 +43,7 @@
 				9180501425C0711C00C38510 /* Core.framework in Embed Frameworks */,
 				9180501725C0711E00C38510 /* Logging.framework in Embed Frameworks */,
 				91B2798325C0781F00E583C9 /* BalanceService.framework in Embed Frameworks */,
-				9190D1AE25C43F6200969539 /* Resource.framework in Embed Frameworks */,
+				91909C7925CD781A001D1DE5 /* Resource.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -52,8 +60,19 @@
 		9180500E25C0711800C38510 /* Balance.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Balance.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9180501225C0711C00C38510 /* Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9180501525C0711E00C38510 /* Logging.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Logging.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		9180501825C0755200C38510 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		91909C7725CD781A001D1DE5 /* Resource.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Resource.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		91909CD025CF17EA001D1DE5 /* Fantazia2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fantazia2.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		91909CD225CF17EA001D1DE5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		91909CD425CF17EA001D1DE5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		91909CD625CF17EA001D1DE5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		91909CD825CF17EC001D1DE5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		91909CDB25CF17EC001D1DE5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		91909CDE25CF17EC001D1DE5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		91909CE025CF17EC001D1DE5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9190D1AC25C43F6200969539 /* Resource.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Resource.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9190D1EE25C460A100969539 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../config/fantazia/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		9190D1EF25C460A100969539 /* Base.debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Base.debug.xcconfig; path = ../../../../config/fantazia/Base.debug.xcconfig; sourceTree = "<group>"; };
+		9190D1F025C460A100969539 /* Base.release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Base.release.xcconfig; path = ../../../../config/fantazia/Base.release.xcconfig; sourceTree = "<group>"; };
 		91B2798125C0781F00E583C9 /* BalanceService.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = BalanceService.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B702655990B6D531498957D7 /* Pods-Fantazia.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fantazia.release.xcconfig"; path = "Target Support Files/Pods-Fantazia/Pods-Fantazia.release.xcconfig"; sourceTree = "<group>"; };
 		D689D449303A2B2DEBB52E04 /* Pods_Fantazia.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Fantazia.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -68,8 +87,15 @@
 				9180501325C0711C00C38510 /* Core.framework in Frameworks */,
 				91B2798225C0781F00E583C9 /* BalanceService.framework in Frameworks */,
 				9180501625C0711E00C38510 /* Logging.framework in Frameworks */,
-				9190D1AD25C43F6200969539 /* Resource.framework in Frameworks */,
+				91909C7825CD781A001D1DE5 /* Resource.framework in Frameworks */,
 				07CB1633F75219EAA82697C4 /* Pods_Fantazia.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		91909CCD25CF17EA001D1DE5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -90,6 +116,7 @@
 			isa = PBXGroup;
 			children = (
 				91804EAB25C049F200C38510 /* Fantazia */,
+				91909CD125CF17EA001D1DE5 /* Fantazia2 */,
 				91804EAA25C049F200C38510 /* Products */,
 				91804EC325C04BCB00C38510 /* Frameworks */,
 				69277AF7E1440F1F1CFACC0E /* Pods */,
@@ -102,6 +129,7 @@
 			isa = PBXGroup;
 			children = (
 				91804EA925C049F200C38510 /* Fantazia.app */,
+				91909CD025CF17EA001D1DE5 /* Fantazia2.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -111,8 +139,7 @@
 			children = (
 				91804EAC25C049F200C38510 /* FantaziaApp.swift */,
 				91804EB025C049F400C38510 /* Assets.xcassets */,
-				91804EB525C049F400C38510 /* Info.plist */,
-				9180501825C0755200C38510 /* GoogleService-Info.plist */,
+				9190D1ED25C4606400969539 /* Config */,
 				91804EB225C049F400C38510 /* Preview Content */,
 			);
 			path = Fantazia;
@@ -129,6 +156,7 @@
 		91804EC325C04BCB00C38510 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				91909C7725CD781A001D1DE5 /* Resource.framework */,
 				9190D1AC25C43F6200969539 /* Resource.framework */,
 				91B2798125C0781F00E583C9 /* BalanceService.framework */,
 				9180501525C0711E00C38510 /* Logging.framework */,
@@ -137,6 +165,39 @@
 				D689D449303A2B2DEBB52E04 /* Pods_Fantazia.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		91909CD125CF17EA001D1DE5 /* Fantazia2 */ = {
+			isa = PBXGroup;
+			children = (
+				91909CD225CF17EA001D1DE5 /* AppDelegate.swift */,
+				91909CD425CF17EA001D1DE5 /* SceneDelegate.swift */,
+				91909CD625CF17EA001D1DE5 /* ContentView.swift */,
+				91909CD825CF17EC001D1DE5 /* Assets.xcassets */,
+				91909CDD25CF17EC001D1DE5 /* LaunchScreen.storyboard */,
+				91909CE025CF17EC001D1DE5 /* Info.plist */,
+				91909CDA25CF17EC001D1DE5 /* Preview Content */,
+			);
+			path = Fantazia2;
+			sourceTree = "<group>";
+		};
+		91909CDA25CF17EC001D1DE5 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				91909CDB25CF17EC001D1DE5 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		9190D1ED25C4606400969539 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				9190D1EF25C460A100969539 /* Base.debug.xcconfig */,
+				9190D1F025C460A100969539 /* Base.release.xcconfig */,
+				9190D1EE25C460A100969539 /* GoogleService-Info.plist */,
+				91804EB525C049F400C38510 /* Info.plist */,
+			);
+			path = Config;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -162,6 +223,23 @@
 			productReference = 91804EA925C049F200C38510 /* Fantazia.app */;
 			productType = "com.apple.product-type.application";
 		};
+		91909CCF25CF17EA001D1DE5 /* Fantazia2 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 91909CE325CF17EC001D1DE5 /* Build configuration list for PBXNativeTarget "Fantazia2" */;
+			buildPhases = (
+				91909CCC25CF17EA001D1DE5 /* Sources */,
+				91909CCD25CF17EA001D1DE5 /* Frameworks */,
+				91909CCE25CF17EA001D1DE5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Fantazia2;
+			productName = Fantazia2;
+			productReference = 91909CD025CF17EA001D1DE5 /* Fantazia2.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -172,6 +250,9 @@
 				LastUpgradeCheck = 1230;
 				TargetAttributes = {
 					91804EA825C049F200C38510 = {
+						CreatedOnToolsVersion = 12.3;
+					};
+					91909CCF25CF17EA001D1DE5 = {
 						CreatedOnToolsVersion = 12.3;
 					};
 				};
@@ -190,6 +271,7 @@
 			projectRoot = "";
 			targets = (
 				91804EA825C049F200C38510 /* Fantazia */,
+				91909CCF25CF17EA001D1DE5 /* Fantazia2 */,
 			);
 		};
 /* End PBXProject section */
@@ -199,9 +281,21 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9190D1F325C460A100969539 /* Base.release.xcconfig in Resources */,
 				91804EB425C049F400C38510 /* Preview Assets.xcassets in Resources */,
 				91804EB125C049F400C38510 /* Assets.xcassets in Resources */,
-				91E1EAFF25C07C5B005D31DB /* GoogleService-Info.plist in Resources */,
+				9190D1F225C460A100969539 /* Base.debug.xcconfig in Resources */,
+				9190D1F125C460A100969539 /* GoogleService-Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		91909CCE25CF17EA001D1DE5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				91909CDF25CF17EC001D1DE5 /* LaunchScreen.storyboard in Resources */,
+				91909CDC25CF17EC001D1DE5 /* Preview Assets.xcassets in Resources */,
+				91909CD925CF17EC001D1DE5 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,11 +352,33 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		91909CCC25CF17EA001D1DE5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				91909CD325CF17EA001D1DE5 /* AppDelegate.swift in Sources */,
+				91909CD525CF17EA001D1DE5 /* SceneDelegate.swift in Sources */,
+				91909CD725CF17EA001D1DE5 /* ContentView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		91909CDD25CF17EC001D1DE5 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				91909CDE25CF17EC001D1DE5 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		91804EB625C049F400C38510 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9190D1EF25C460A100969539 /* Base.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -326,6 +442,7 @@
 		};
 		91804EB725C049F400C38510 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9190D1F025C460A100969539 /* Base.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -388,10 +505,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"Fantazia/Preview Content\"";
 				DEVELOPMENT_TEAM = 7KW522KWZF;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = Fantazia/Info.plist;
+				INFOPLIST_FILE = Fantazia/Config/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -401,7 +519,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.seasons.fantazia;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -412,10 +530,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"Fantazia/Preview Content\"";
 				DEVELOPMENT_TEAM = 7KW522KWZF;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = Fantazia/Info.plist;
+				INFOPLIST_FILE = Fantazia/Config/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -423,6 +542,52 @@
 				);
 				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.seasons.fantazia;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		91909CE125CF17EC001D1DE5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"Fantazia2/Preview Content\"";
+				DEVELOPMENT_TEAM = 7KW522KWZF;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = Fantazia2/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.seasons.fantazia2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		91909CE225CF17EC001D1DE5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"Fantazia2/Preview Content\"";
+				DEVELOPMENT_TEAM = 7KW522KWZF;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = Fantazia2/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.seasons.fantazia2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -446,6 +611,15 @@
 			buildConfigurations = (
 				91804EB925C049F400C38510 /* Debug */,
 				91804EBA25C049F400C38510 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		91909CE325CF17EC001D1DE5 /* Build configuration list for PBXNativeTarget "Fantazia2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				91909CE125CF17EC001D1DE5 /* Debug */,
+				91909CE225CF17EC001D1DE5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
