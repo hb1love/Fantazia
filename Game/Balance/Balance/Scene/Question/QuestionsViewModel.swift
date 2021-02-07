@@ -36,7 +36,9 @@ final class QuestionsViewModel: ObservableObject, Identifiable {
   @Published var question: Question = .default
   @Published var errorMessage = ""
   @Published var title = ""
+  @Published var showAlert = false
   var order: Int = 0
+  var adUnitId: String
   
   private let responseSubject = PassthroughSubject<[Question], Never>()
   private let errorSubject = PassthroughSubject<BalanceError, Never>()
@@ -48,12 +50,14 @@ final class QuestionsViewModel: ObservableObject, Identifiable {
   init(
     topic: Topic,
     balanceService: BalanceService,
-    loggingService: LoggingService
+    loggingService: LoggingService,
+    adUnitId: String
   ) {
     self.topic = topic
     self.balanceService = balanceService
     self.loggingService = loggingService
     self.title = topic.title
+    self.adUnitId = adUnitId
     
     bindInputs()
     bindOutputs()
@@ -120,7 +124,10 @@ private extension QuestionsViewModel {
 
   func nextQuestion() {
     let nextOrder = order + 1
-    guard dataSource.count > nextOrder else { return }
+    guard dataSource.count > nextOrder else {
+      showAlert = true
+      return
+    }
     question = dataSource[nextOrder]
     order = nextOrder
   }

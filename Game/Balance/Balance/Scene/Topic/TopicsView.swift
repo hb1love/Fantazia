@@ -22,14 +22,6 @@ public struct TopicsView: View {
         .padding(.bottom, 32)
         .edgesIgnoringSafeArea(.bottom)
     }
-    .onReceive(NotificationCenter.default.publisher(
-      for: UIApplication.didBecomeActiveNotification
-            )) { _ in
-                // The app moved to the background
-//                isAnimating = false
-      log.debug($viewModel.dataSource)
-      viewModel.apply(.onAppear)
-            }
     .onAppear(perform: { viewModel.apply(.onAppear) })
     .edgesIgnoringSafeArea(.top)
     .edgesIgnoringSafeArea(.bottom)

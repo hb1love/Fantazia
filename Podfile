@@ -20,7 +20,7 @@ target 'Fantazia' do
   project 'Fantazia/Fantazia'
 
   google_utilites
-#  ad
+  ad
   sdk
 end
 
@@ -28,21 +28,21 @@ target 'Balance' do
   project 'Game/Balance/Balance'
 
   google_utilites
-#  ad
+  ad
 end
 
 target 'BalanceApp' do
   project 'Game/Balance/Balance'
 
   google_utilites
-#  ad
+  ad
 end
 
 target 'Core' do
   project 'Common/Core/Core'
 
   google_utilites
-#  ad
+  ad
 end
 
 post_install do |installer|

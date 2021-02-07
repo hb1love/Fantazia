@@ -64,7 +64,9 @@
 				91909C4F25CD755D001D1DE5 /* Products */,
 				91909C6C25CD7677001D1DE5 /* Frameworks */,
 			);
+			indentWidth = 2;
 			sourceTree = "<group>";
+			tabWidth = 2;
 		};
 		91909C4F25CD755D001D1DE5 /* Products */ = {
 			isa = PBXGroup;

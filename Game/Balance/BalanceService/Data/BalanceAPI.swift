@@ -6,6 +6,7 @@
 //
 
 import Combine
+import Logging
 
 public var topics: [Topic] = load("topicsData.json")
 public var questions: [Question] = {
@@ -15,7 +16,8 @@ public var questions: [Question] = {
 
 enum BalanceAPI {
   private static var baseURL: URL {
-    URL(string: BalanceServiceModule.baseUrl)!
+    log.debug(BalanceServiceModule.baseUrl)
+    return URL(string: BalanceServiceModule.baseUrl)!
   }
   private static let client = Client()
   

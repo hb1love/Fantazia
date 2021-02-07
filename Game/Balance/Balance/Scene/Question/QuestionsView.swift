@@ -9,13 +9,20 @@ import SwiftUI
 import BalanceService
 import Resource
 import Core
-//import GoogleMobileAds
+import Logging
+import GoogleMobileAds
 
 public struct QuestionsView: View {
+  @Environment(\.presentationMode) var presentationMode
 
-//  var interstitial: Interstitial = Interstitial()
+  var interstitial: Interstitial
 
   @ObservedObject var viewModel: QuestionsViewModel
+
+  init(viewModel: QuestionsViewModel) {
+    self.viewModel = viewModel
+    self.interstitial = Interstitial(adUnitId: viewModel.adUnitId)
+  }
   
   public var body: some View {
     ZStack {
@@ -36,7 +43,6 @@ public struct QuestionsView: View {
             "ic_prev".image
           })
           Button(action: {
-//            interstitial.showAd()
             viewModel.apply(.onNext)
           }, label: {
             "ic_next".image
@@ -50,7 +56,12 @@ public struct QuestionsView: View {
         .padding(.bottom, 8)
       }
     }
-    .font(Font.preferredFont(type: .nanumBarunpenB, size: 24))
+    .alert(isPresented: $viewModel.showAlert,
+           TextAlert(title: "마지막 문항입니다 👻",
+                     action: { _ in
+                      interstitial.showAd {
+                        self.presentationMode.wrappedValue.dismiss()
+                      }}))
     .navigationTitle(viewModel.title)
   }
 }

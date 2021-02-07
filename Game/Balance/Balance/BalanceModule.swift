@@ -10,7 +10,9 @@ import BalanceService
 import Logging
 import Resource
 
-public protocol BalanceConfiguration: BalanceServiceConfiguration {}
+public protocol BalanceConfiguration: BalanceServiceConfiguration {
+  static var adUnitId: String { get }
+}
 
 public class BalanceModule {
   static var config: BalanceConfiguration.Type?
@@ -51,7 +53,8 @@ extension BalanceModule {
     QuestionsViewModel(
       topic: topic,
       balanceService: BalanceServiceModule.balanceService,
-      loggingService: LoggingModule.loggingService
+      loggingService: LoggingModule.loggingService,
+      adUnitId: _config.adUnitId
     )
   }
 }
